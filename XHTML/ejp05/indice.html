@@ -1,0 +1,76 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Información sobre el producto</title>
+
+<body>
+	<h1>Información sobre el producto</h1>
+	<form	action="post.php"	method="POST" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Datos básicos</legend>
+
+			<label for="nombre">Nombre</label>
+			<br/>
+			<input	type="text"	name="nombre" id="nombre" size="50" value=""/>
+			<br/>
+
+			<label for="contraseña">Contraseña</label>
+			<br/>
+			<input	type="password"	name="contraseña" id="contraseña" size="50"	value=""/>
+			<br/>
+
+			<label for="descripcion">Descripción</label>
+			<br/>
+			<textarea	name="descripcion" id="descripcion"	cols="40"	rows="5"></textarea>
+			<br/>
+			<br/>
+
+			<label>Foto</label>
+			<input type="file"	name="foto"/>
+			<br/>
+			<br/>
+
+			<input	type="checkbox" name="contador" id="contador"	value="1"/>
+			<label for="contador">Añadir contador de visitas</label>
+			<br/>
+			<br/>
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos económicos</legend>
+			<label for="precio">Precio</label>
+			<input	type="text"	name="precio" id="precio" value=""/>
+			<spam>€</spam>
+			&nbsp;&nbsp;
+			<label for="impuestos">Impuestos</label>
+			<select	id="impuestos"	name="impuestos">
+				<optgroup label="Impuestos bajos">
+					<option	value="4" selected="selected">4%</option>
+					<option	value="8">8%</option>
+				</optgroup>
+				<optgroup label="Impuestos altos">
+					<option	value="16">16%</option>
+					<option	value="18">18%</option>
+					<option	value="21">21%</option>
+				</optgroup>
+			</select>
+			<br/>
+			<br/>
+
+			<span>Promoción</span>
+			<br/>
+			<input	type="radio" name="promocion" id="ninguno" checked value="1"/>
+			<label for="ninguno">Ninguno</label>
+			<br/>
+			<input	type="radio" name="promocion" id="gratuito" value="2"/>
+			<label for="gratuito">Transporte gratuito</label>
+			<br/>
+			<input	type="radio" name="promocion" id="descuento" value="3"/>
+			<label for="descuento">Descuento 5%</label>
+			<br/>
+		</fieldset>
+		<br/>
+		<input	type="submit" name="enviar"	value="Enviar"/>
+	</form>
+</body>
+</html>
