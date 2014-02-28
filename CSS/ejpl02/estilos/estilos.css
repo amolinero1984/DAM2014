@@ -1,0 +1,42 @@
+*{
+	border:1px solid #000;
+	box-sizing: border-box; /*CSS3 ancho exacto teniendo en cuenta el borde y paddings*/
+}
+
+body{
+	font: 14pt/1.48em "Source Sans Pro",san-serif;
+	color: #FFF;
+}
+
+.contenedor{
+	background-color: #045FB4;
+	border: 1px solid #000;
+	width: 400px;
+}
+
+ul{
+	padding:0;
+}
+
+ul li {
+	list-style: none;
+	position: relative;
+	background-color: #848484;
+}
+
+li ul{
+	width: 70px;
+	position: absolute;
+	top:100%;
+	left:0%;
+	display: none; /*Oculta*/
+}
+
+li:hover ul{
+	display: block; /*Muestra*/
+}
+
+.horizontal > li{ /*Hijos*/
+	display: inline-block; /*Comportamiento en linea pero con lo del bloque*/
+	background-color: #045FB4;
+}

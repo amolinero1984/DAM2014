@@ -1,5 +1,5 @@
 *{
-	border:1px solid #000;
+	/*border:1px solid #000;*/
 	box-sizing: border-box; /*CSS3 ancho exacto teniendo en cuenta el borde y paddings*/
 }
 
@@ -44,40 +44,138 @@ h1, .h1{
 	font-weight: normal;
 }
 
+img{
+	max-width: 100%; /*Ancho maximo de la imagen es 100% */
+	display: block;
+	width: :200px;
+	margin: 0 auto;
+}
+
 /* Textos */
 .bold{ font-weight: bold; }
+.italic{font-style: italic; }
 .normal{font-weight: normal; }
 .small{ font-size: 0.8em; }
 .big{ font-size: 1.5em; }
 .uppercase{ text-transform: uppercase; }
 .list  {list-style: none; padding:0; } /*Quita balines y paddings*/
 .center {text-align: center;}
+.list p {margin: 0} /* Quita margenes por defecto del parrafo*/
+.list li {padding: 20px 0;}
+.list li:first-child{padding-top:0px;}
+.price{font-size: 1.4em;font-weight: bold;}
+.list li h4{color:#03f;font-style: italic;}
+.list-blue li{ /*Iconos e imagenes*/
+	background: transparent url("http://placehold.it/10x10") no-repeat 0 10px;
+	padding-left: 20px;
+}
 
 /* Colores */
 .txt-red {color: #F00;}
+.txt-blue{color: #7cbcf3;}
 .bg-white{background-color: #FFF;}
 
-.breadcrum{
+.breadcrumb{
 	text-transform: uppercase;
 	list-style: none;
 	padding: 0;
 }
 
-.breadcrum .current,.menu .current{
+.breadcrumb .current,.menu .current{
 	color: red;
 }
 
+.breadcrumb li{
+	display:inline-block;
+}
+
+.breadcrumb li:after{
+	content: "/";
+}
+
+.breadcrumb li.current:after{
+	content: "";
+}
+
+/*CSS3*/
+.breadcrumb li:last-child:after{
+	content: "";
+}
+
+.breadcrumb a{
+	margin-right: 5px;
+}
+
+.marco{
+	background-color:#FFF;
+	padding:15px;
+	box-shadow: 0 0 5px #cdcdcd;
+}
+
+.marco p{
+	margin: 0;
+}
+
 .list-blue{padding-left: 20px;}
+
+/* Botones */
+.btn{
+	display: inline-block; /*Para poder darles margenes*/
+	width: 115px;
+	padding: 5px;
+	margin: auto 5px;
+
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 3px;
+	box-shadow: 0 1px 4px#cdcdcd;
+	background-image: linear-gradient(to bottom, #999, #CCC);
+}
+.btn-red{
+	background-image: linear-gradient(to bottom, #f74040 80%, #d33535);
+}
+
+.btn-big{
+	padding: 10px inherit; /*Hereda el resto*/
+}
+
+.bg-gray:first-child .wrapper{ /* CSS3 Selecciona el elemento wrapper que este dentro de bg-gray y es el primer hijo*/
+	padding-bottom: 0;
+}
+
+.description{
+	padding:20px;
+}
 
 /* Layout */
 .wrapper{
 	width: 990px;
 	margin: 0 auto;
-	padding: 40px 0;
 	/*Centrar cualquier elemento de bloque dentro del navegador*/
+	padding: 40px 0;
+}
+
+/*Solucionador de la descolocacion de los flotes*/
+.wrapper:before, .wrapper:after,
+.clearfix:before, .clearfix:after{
+	content: "";
+	display:table;
+}
+
+.wrapper:after,
+.clearfix:after{
+	clear:both;
+}
+
+/*Solucionador de la descolocacion de los flotes tambien para IE */
+.clearfix{
+	zoom: 1;
 }
 
 .fleft{ float: left;}
 .col-25 {width: 25%; }
 .col-50 {width: 50%; }
 .col-75 {width: 75%; }
+
