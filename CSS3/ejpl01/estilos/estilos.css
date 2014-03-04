@@ -1,0 +1,24 @@
+.num-columns{
+	-webkit-column-count: 5;
+	-moz-column-count: 5;
+	-ms-column-count: 5;
+	-o-column-count: 5;
+}
+
+.ancho-columns{
+	-webkit-column-width:10em;
+	-moz-column-width:10em;
+	-ms-column-width:10em;
+	-o-column-width:10em;
+}
+
+.trazos{
+	-webkit-column-rule:1px dotted black;
+	-moz-column-rule:1px dotted black;
+	-ms-column-rule:1px dotted black;
+	-o-column-rule:1px dotted black;
+}
+
+.altura-max{
+	height: 80px;
+}
