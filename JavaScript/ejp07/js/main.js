@@ -22,7 +22,7 @@ var anade = (function(e){
     };
 
     //lista.addEventListener('click',mostrarTexto); Delegamos el evento SOLO JQuery
-    $('#lista').addEventListener('click',mostrarTexto);
+    //$('#lista').addEventListener('click',mostrarTexto);
 
     for (var i = lis.length - 1; i >= 0; i--) {
         lis[i].addEventListener('click', mostrarTexto); //Con parentesis lo ejecutaria al mismo tiempo
